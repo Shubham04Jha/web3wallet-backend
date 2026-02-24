@@ -11,9 +11,9 @@ A Next.js headless API backend that serves blockchain data (balances, transactio
 - [Route Overview](#route-overview)
 - [Common Conventions](#common-conventions)
 - [Routes](#routes)
-  - [GET /api — Health Check](#get-api--health-check)
-  - [POST /api/ethereum/getBalance](#post-apiethereum-getbalance)
-  - [POST /api/solana/getBalance](#post-apisolana-getbalance)
+  - [GET /api Health Check](#health-check)
+  - [POST /api/ethereum/getBalance](#ethereum-getbalance)
+  - [POST /api/solana/getBalance](#solana-getbalance)
 - [Running Locally](#running-locally)
 
 ---
@@ -107,7 +107,7 @@ Fetches the ETH balance of a given wallet address by calling the Alchemy `eth_ge
 }
 ```
 
-#### Ethereum getBalance — Frontend Examples
+#### <a id="ethereum-getbalance-examples"></a>Ethereum getBalance Examples
 
 <details>
 <summary><strong>TypeScript</strong></summary>
@@ -209,7 +209,7 @@ Fetches the SOL balance of a given wallet address by calling the Alchemy `getBal
 }
 ```
 
-> ℹ️ `value` is a **numeric string** representing the balance in **lamports**. 1 SOL = 1,000,000,000 lamports.
+> ℹ️ `value` is a **numeric string** representing the balance in **lamports**. 1 SOL = 1,000,000,000 lamports (see [frontend examples](#solana-getbalance-examples)).
 
 **Error Response** `400`
 ```json
@@ -218,7 +218,7 @@ Fetches the SOL balance of a given wallet address by calling the Alchemy `getBal
 }
 ```
 
-#### Solana getBalance — Frontend Examples
+#### <a id="solana-getbalance-examples"></a>Solana getBalance Examples
 
 <details>
 <summary><strong>TypeScript</strong></summary>
