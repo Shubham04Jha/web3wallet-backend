@@ -1,3 +1,5 @@
+## Frontend Live: [https://web3wallet.projects.shubhamjha.me/wallet](https://web3wallet.projects.shubhamjha.me/wallet)
+## Frontend Repo: [https://github.com/Shubham04Jha/web3wallet](https://github.com/Shubham04Jha/web3wallet)
 # web3wallet-backend
 
 A Next.js headless API backend that serves blockchain data (balances, transactions, etc.) for the web3wallet frontend. Abstracts away direct Alchemy RPC calls behind clean, validated REST endpoints.
