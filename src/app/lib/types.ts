@@ -1,4 +1,4 @@
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export type getBalanceReturnType = {
     value: string | null;
@@ -10,3 +10,5 @@ export const chainTypeValues: chainTypes[] = ['main', 'test'];
 
 export type Handler = (req: NextRequest)=>Promise<Response>;
 export type Middleware = (next: Handler)=>Handler;
+
+export type APIReturnType<T> = Promise<NextResponse< T | { error: unknown }>>

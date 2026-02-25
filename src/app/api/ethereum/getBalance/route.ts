@@ -1,9 +1,9 @@
 import { ALCHEMY_API_KEY, alchemyEthereumChainTypes } from "@/app/lib/config";
-import { getBalanceReturnType } from "@/app/lib/types";
+import { APIReturnType, getBalanceReturnType } from "@/app/lib/types";
 import { getBalanceReqBodySchema } from "@/app/lib/validation/requestBodySchemas";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(request: NextRequest): Promise<NextResponse<getBalanceReturnType>|NextResponse<{error:any}>>{
+export async function POST(request: NextRequest): APIReturnType<getBalanceReturnType>{
     try {
         if(!request.headers.get('Content-Type')?.includes('application/json')){
             return NextResponse.json({error: 'Content-Type must be application/json'},{status:415});
